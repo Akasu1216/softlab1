@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXORABD</title>
+    <!--=======================Google Font================-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <!--=======================Google Font================-->
+    <!--==================================================-->
+    <!--====================Tailwind Css==================-->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!--====================Tailwind Css==================-->
+    <!--==================================================-->
+    <!--==================Rimix Icon======================-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"rel="stylesheet"/>
+    <!--==================Rimix Icon======================-->
+    <!--================CSS LINK==========================-->
+    <link rel="stylesheet" href="css/style.css">
+    <!--================CSS LINK==========================-->
+</head>
+<body class="font-inter">
+<!--=================Header Part Start===============================================--> 
+<header id="header-full" class="px-3 w-full fixed sm:px-0 bg-[#011F7F] z-51 border-b border-gray-500/50">
+  <div class="header-main border-b-0 sm:border-b-1 border-gray-500/50">
+    <div id="header-content" class="container mx-auto">
+      <div class="header-top-content flex items-center justify-between py-2">
+        <div class="logo">
+          <a href="#">
+            <img src="images/logo.png" alt="logo" class="h-12 sm:h-15">
+          </a>
+        </div>
+        <div class="hidden sm:block search-bar">
+          <div class="relative w-[430px]">
+            <input type="text" placeholder="Search NEXORABD"class="w-full bg-white rounded-full px-5 py-2 pr-12 text-gray-700 border focus:outline-none"/>
+            <button class="absolute right-1.5 top-1/2 -translate-y-1/2 bg-[#011F7F] text-white rounded-full w-10 h-8 flex items-center justify-center">
+            <i class="ri-search-line text-white text-sm"></i>
+            </button>
+          </div>
+        </div>
+        <div class="hidden sm:flex header-r-items items-center gap-6">
+          <div class="item flex items-center border-r border-gray-500/50 pr-4">
+            <i class="ri-microsoft-fill text-white text-3xl"></i>
+            <div class="ml-2">
+              <p class="text-white text-sm">Download the</p>
+              <a href="#" class="text-white text-sm">NexoraBD App</a>
+            </div>
+          </div>
+          <div class="item flex items-center border-r border-gray-500/50 pr-4">
+            <i class="ri-user-fill text-white text-3xl"></i>
+            <div class="ml-2">
+              <p class="text-white text-sm">Welcome to</p>
+              <a href="#" class="text-white text-sm">Admin login</a>
+            </div>
+          </div>
+          <div id="cart-icon" class=" item flex items-center">
+            <i class="ri-shopping-cart-line text-white text-3xl"></i>
+            <div class="pl-2 flex flex-col items-center">
+              <span id="cart-count" class="bg-yellow-400 text-white text-sm font-bold px-3 rounded-full">0</span>
+              <p class="text-white text-sm">Cart</p>
+            </div>
+          </div>
+        </div>
+        <div class="sm:hidden flex items-center gap-4">
+          <div class="flex items-center relative">
+            <i class="ri-shopping-cart-line text-white text-3xl"></i>
+            <span class="absolute -top-2 -right-2 bg-yellow-400 text-white text-xs font-bold px-2 rounded-full">0</span>
+          </div>
+          <button class="text-white text-3xl" id="mobileMenuBtn">
+            <i class="ri-menu-line"></i>
+          </button>
+        </div>
+      </div>
+      <div class="sm:hidden mt-2 mb-4">
+        <div class="relative w-full">
+          <input type="text" placeholder="Search NEXORABD"class="w-full bg-white rounded-full px-5 py-2 pr-10 text-gray-700 border focus:outline-none" />
+          <button class="absolute right-1.5 top-1/2 -translate-y-1/2 bg-[#011F7F] text-white rounded-full w-8 h-8 flex items-center justify-center">
+          <i class="ri-search-line text-white text-sm"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="menu-full bg-[#011F7F] text-white hidden sm:block">
+    <div class="container mx-auto flex items-center justify-between py-2">
+      <div class="relative select-option hidden sm:block">
+        <select class="select w-[300px] rounded-full pl-10 pr-4 py-2 text-black focus:outline-none">
+          <option disabled selected>All Categories</option>
+          <option>Electronics</option>
+          <option>Clothings</option>
+          <option>Accessories</option>
+          <option>Home & Kitchen</option>
+          <option>Smartphone</option>
+          <option>Motorbike</option>
+        </select>
+      <i class="ri-menu-line absolute left-3 top-1/2 -translate-y-1/2 text-xl text-black"></i>
+      </div>
+      <ul class="hidden sm:flex items-center space-x-8">
+        <li><a href="#" class="hover:text-yellow-400 font-semibold">Bestsellers</a></li>
+        <li><a href="#" class="hover:text-yellow-400 font-semibold">Top Brands</a></li>
+        <li><a href="#" class="hover:text-yellow-400 font-semibold">Home & Garden</a></li>
+        <li><a href="#" class="hover:text-yellow-400 font-semibold">Hair Extensions & Wigs</a></li>
+        <li>
+          <div class="dropdown dropdown-hover">
+            <a href="#" class="flex items-center hover:text-yellow-400 font-bold">
+              More <i class="ri-arrow-down-s-line ml-1"></i>
+            </a>
+            <ul tabindex="0" class="dropdown-content menu bg-white text-black rounded-box z-10 w-52 p-2 shadow-sm">
+              <li><a href="#">New Arrivals</a></li>
+              <li><a href="#">Today’s Deals</a></li>
+              <li><a href="#">Trending Now</a></li>
+              <li><a href="#">Flash Sale</a></li>
+              <li><a href="#">Top Rated</a></li>
+              <li><a href="#">Clearance</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+      <div class="hidden sm:flex items-center font-semibold">
+        <i class="ri-phone-fill mr-2 text-yellow-400"></i> Hot Line : +88002255444
+      </div>
+    </div>
+  </div>
+  <div id="mobileSidebar"
+    class="fixed top-0 left-0 h-full w-64 bg-[#011F7F] text-white transform -translate-x-full transition-transform duration-300 z-50">
+    <div class="p-4 flex justify-between items-center border-b border-gray-500/50">
+      <h2 class="text-lg font-bold">Menu</h2>
+      <button id="closeSidebar" class="text-2xl">
+        <i class="ri-close-line"></i>
+      </button>
+    </div>
+    <ul class="flex flex-col p-4 space-y-4">
+      <li><a href="#" class="menu-item hover:text-yellow-400 transition-colors duration-200">Bestsellers</a></li>
+      <li><a href="#" class="menu-item hover:text-yellow-400 transition-colors duration-200">Top Brands</a></li>
+      <li><a href="#" class="menu-item hover:text-yellow-400 transition-colors duration-200">Home & Garden</a></li>
+      <li><a href="#" class="menu-item hover:text-yellow-400 transition-colors duration-200">Hair Extensions & Wigs</a></li>
+      <li><a href="#" class="menu-item hover:text-yellow-400 transition-colors duration-200">New Arrivals</a></li>
+      <li><a href="#" class="menu-item hover:text-yellow-400 transition-colors duration-200">Today’s Deals</a></li>
+      <li><a href="#" class="menu-item hover:text-yellow-400 transition-colors duration-200">Hot Line: +88002255444</a></li>
+    </ul>
+  </div>
+  <div id="overlay" class="fixed inset-0 bg-black/50 hidden z-40"></div>
+</header>
+<!--=================Header Section End===============-->
+<!--==================================================-->
+<main>
+<section id="elect-banner" class="relative w-full h-[650px] overflow-hidden">
+  <div id="slides-container" class="absolute top-0 left-0 flex w-full h-full transition-transform duration-500 ease-in-out">
+    <div class="slide flex-shrink-0 w-full h-full bg-cover bg-center" style="background-image: url('images/mb1.jpg');"></div>
+    <div class="slide flex-shrink-0 w-full h-full bg-cover bg-center" style="background-image: url('images/mb2.jpg');"></div>
+    <div class="slide flex-shrink-0 w-full h-full bg-cover bg-center" style="background-image: url('images/mb3.jpg');"></div>
+    <div class="slide flex-shrink-0 w-full h-full bg-cover bg-center" style="background-image: url('images/mb4.jpg');"></div>
+  </div>
+  <div class="absolute top-0 left-0 w-full h-full bg-black/80 z-20"></div>
+  <div class="relative z-30 mt-10 w-full h-full flex flex-col items-center justify-center text-center px-6">
+    <h1 class="text-white text-5xl md:text-6xl font-extrabold mb-4">New <span class="text-yellow-400">Smartphone</span></h1>
+    <p class="text-white/90 text-lg md:text-xl mb-6 max-w-xl">
+      Discover the latest gadgets and Smartphone at unbeatable prices. Shop now and upgrade your lifestyle.
+    </p>
+     <a href="#shop-now" class="bg-yellow-400 text-black hover:text-white hover:bg-[#011F7F] font-bold py-4 px-10 rounded-lg transition-colors duration-300">
+    Shop Now</a>
+  </div>
+  <button id="prev-slide" class="absolute top-1/2 -translate-y-1/2 left-4 bg-white/30 hover:bg-white text-black w-12 h-12 rounded-full flex items-center justify-center text-3xl z-30 transition-colors duration-300">
+    <i class="ri-arrow-left-s-line"></i>
+  </button>
+  <button id="next-slide" class="absolute top-1/2 -translate-y-1/2 right-4 bg-white/30 hover:bg-white text-black w-12 h-12 rounded-full flex items-center justify-center text-3xl z-30 transition-colors duration-300">
+    <i class="ri-arrow-right-s-line"></i>
+  </button>
+</section>
+<!--===============Banner Section Start=============-->
+<div id="cart-sidebar" class="fixed top-0 right-0 w-80 h-full bg-white shadow-lg transform translate-x-full transition-transform duration-300 z-60 flex flex-col">
+    <div class="flex justify-between items-center p-4 border-b">
+      <h2 class="text-lg font-bold">🛒 Your Cart</h2>
+      <button id="close-cart" class="text-gray-600 hover:text-red-500 text-2xl">
+        <i class="ri-close-line"></i>
+      </button>
+    </div>
+    <div id="cart-items" class="flex-1 overflow-y-auto p-4 space-y-3"></div>
+    <div class="border-t p-4 flex justify-between items-center">
+      <p class="font-bold">Total: <span id="cart-total">BDT 0</span></p>
+      <button id="checkout-btn" class="bg-[#011F7F] text-white px-4 py-2 rounded hover:bg-[#D4024E]">
+     Checkout</button>
+  </div>
+  </div>
+<!--========================================================-->
+
+<section id="electronic-product" class="pb-8">
+    <div class="electronic-content container mx-auto">
+      <div class="heading border-b border-gray-300 mt-6">
+        <h2 class="text-black text-3xl font-bold pb-4">Electronics</h2>
+      </div>
+      <div id="slider" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-6"> 
+        <div class="bg-white border border-gray-200 hover:border-gray-400 cursor-pointer p-4 relative flex flex-col group" 
+          data-id="67899" data-desc="Tasty Chocolate Cookies with rich cocoa flavor. Great for parties."
+          data-images='["images/ip1.jpg","images/14a.jpg","images/24a.jpg"]'>
+        <div class="relative">
+          <img src="images/ip1.jpg" alt="Gingersnaps" class="w-full h-50">
+        </div>
+        <h3 class="text-lg font-semibold mt-3">BDT: 16950</h3>
+        <p class="text-sm text-gray-600">Nyakers Gingersnaps Pom Tin</p>
+        <div class="flex items-center gap-1 text-yellow-400 text-base font-bold mt-2">
+          <i class="ri-star-fill"></i>
+          <i class="ri-star-fill"></i>
+          <i class="ri-star-line"></i>
+          <i class="ri-star-line"></i>
+          <i class="ri-star-line"></i>
+          <span class="text-black text-xs ml-1">01</span>
+        </div>
+        <div class="mt-4">
+          <button class="add-to-cart mt-3 w-full bg-[#011F7F]  text-white py-2 rounded-md hover:bg-blue-500 z-10 relative">Add to cart</button>
+        </div>
+      </div>
+      <div class="bg-white border border-gray-200 hover:border-gray-400 cursor-pointer p-4 relative flex flex-col group" 
+          data-id="67810" data-desc="Tasty Chocolate Cookies with rich cocoa flavor. Great for parties."
+          data-images='["images/ip2.jpg","images/14a.jpg","images/24a.jpg"]'>
+        <div class="relative">
+          <img src="images/ip2.jpg" alt="Gingersnaps" class="w-full h-50">
+        </div>
+        <h3 class="text-lg font-semibold mt-3">BDT: 16950</h3>
+        <p class="text-sm text-gray-600">Nyakers Gingersnaps Pom Tin</p>
+        <div class="flex items-center gap-1 text-yellow-400 text-base font-bold mt-2">
+          <i class="ri-star-fill"></i>
+          <i class="ri-star-fill"></i>
+          <i class="ri-star-line"></i>
+          <i class="ri-star-line"></i>
+          <i class="ri-star-line"></i>
+          <span class="text-black text-xs ml-1">01</span>
+        </div>
+        <div class="mt-4">
+          <button class="add-to-cart mt-3 w-full bg-[#011F7F]  text-white py-2 rounded-md hover:bg-blue-500 z-10 relative">Add to cart</button>
+        </div>
+      </div>
+          
+      <div class="bg-white border border-gray-200 hover:border-gray-400 cursor-pointer p-4 relative flex flex-col group" 
+          data-id="67811" data-desc="Tasty Chocolate Cookies with rich cocoa flavor. Great for parties."
+          data-images='["images/ip3.jpg","images/14a.jpg","images/24a.jpg"]'>
+        <div class="relative">
+          <img src="images/ip3.jpg" alt="Gingersnaps" class="w-full h-50">
+        </div>
+        <h3 class="text-lg font-semibold mt-3">BDT: 16950</h3>
+        <p class="text-sm text-gray-600">Nyakers Gingersnaps Pom Tin</p>
+        <div class="flex items-center gap-1 text-yellow-400 text-base font-bold mt-2">
+          <i class="ri-star-fill"></i>
+          <i class="ri-star-fill"></i>
+          <i class="ri-star-line"></i>
+          <i class="ri-star-line"></i>
+          <i class="ri-star-line"></i>
+          <span class="text-black text-xs ml-1">01</span>
+        </div>
+        <div class="mt-4">
+          <button class="add-to-cart mt-3 w-full bg-[#011F7F]  text-white py-2 rounded-md hover:bg-blue-500 z-10 relative">Add to cart</button>
+        </div>
+      </div>
+      <div class="bg-white border border-gray-200 hover:border-gray-400 cursor-pointer p-4 relative flex flex-col group" 
+          data-id="67812" data-desc="Tasty Chocolate Cookies with rich cocoa flavor. Great for parties."
+          data-images='["images/ip2.jpg","images/14a.jpg","images/24a.jpg"]'>
+        <div class="relative">
+          <img src="images/ip2.jpg" alt="Gingersnaps" class="w-full h-50">
+        </div>
+        <h3 class="text-lg font-semibold mt-3">BDT: 16950</h3>
+        <p class="text-sm text-gray-600">Nyakers Gingersnaps Pom Tin</p>
+        <div class="flex items-center gap-1 text-yellow-400 text-base font-bold mt-2">
+          <i class="ri-star-fill"></i>
+          <i class="ri-star-fill"></i>
+          <i class="ri-star-line"></i>
+          <i class="ri-star-line"></i>
+          <i class="ri-star-line"></i>
+          <span class="text-black text-xs ml-1">01</span>
+        </div>
+        <div class="mt-4">
+          <button class="add-to-cart mt-3 w-full bg-[#011F7F]  text-white py-2 rounded-md hover:bg-blue-500 z-10 relative">Add to cart</button>
+        </div>
+      </div>
+          <div class="bg-white border border-gray-200 hover:border-gray-400 cursor-pointer p-4 relative flex flex-col group" 
+          data-id="67813" data-desc="Tasty Chocolate Cookies with rich cocoa flavor. Great for parties."
+          data-images='["images/ip1.jpg","images/14a.jpg","images/24a.jpg"]'>
+        <div class="relative">
+          <img src="images/ip1.jpg" alt="Gingersnaps" class="w-full h-50">
+        </div>
+        <h3 class="text-lg font-semibold mt-3">BDT: 16950</h3>
+        <p class="text-sm text-gray-600">Nyakers Gingersnaps Pom Tin</p>
+        <div class="flex items-center gap-1 text-yellow-400 text-base font-bold mt-2">
+          <i class="ri-star-fill"></i>
+          <i class="ri-star-fill"></i>
+          <i class="ri-star-line"></i>
+          <i class="ri-star-line"></i>
+          <i class="ri-star-line"></i>
+          <span class="text-black text-xs ml-1">01</span>
+        </div>
+        <div class="mt-4">
+          <button class="add-to-cart mt-3 w-full bg-[#011F7F]  text-white py-2 rounded-md hover:bg-blue-500 z-10 relative">Add to cart</button>
+        </div>
+      </div>
+          <div class="bg-white border border-gray-200 hover:border-gray-400 cursor-pointer p-4 relative flex flex-col group" 
+          data-id="67814" data-desc="Tasty Chocolate Cookies with rich cocoa flavor. Great for parties."
+          data-images='["images/ip3.jpg","images/14a.jpg","images/24a.jpg"]'>
+        <div class="relative">
+          <img src="images/ip3.jpg" alt="Gingersnaps" class="w-full h-50">
+        </div>
+        <h3 class="text-lg font-semibold mt-3">BDT: 16950</h3>
+        <p class="text-sm text-gray-600">Nyakers Gingersnaps Pom Tin</p>
+        <div class="flex items-center gap-1 text-yellow-400 text-base font-bold mt-2">
+          <i class="ri-star-fill"></i>
+          <i class="ri-star-fill"></i>
+          <i class="ri-star-line"></i>
+          <i class="ri-star-line"></i>
+          <i class="ri-star-line"></i>
+          <span class="text-black text-xs ml-1">01</span>
+        </div>
+        <div class="mt-4">
+          <button class="add-to-cart mt-3 w-full bg-[#011F7F]  text-white py-2 rounded-md hover:bg-blue-500 z-10 relative">Add to cart</button>
+        </div>
+      </div>
+          <div class="bg-white border border-gray-200 hover:border-gray-400 cursor-pointer p-4 relative flex flex-col group" 
+          data-id="67815" data-desc="Tasty Chocolate Cookies with rich cocoa flavor. Great for parties."
+          data-images='["images/ip2.jpg","images/14a.jpg","images/24a.jpg"]'>
+        <div class="relative">
+          <img src="images/ip2.jpg" alt="Gingersnaps" class="w-full h-50">
+        </div>
+        <h3 class="text-lg font-semibold mt-3">BDT: 16950</h3>
+        <p class="text-sm text-gray-600">Nyakers Gingersnaps Pom Tin</p>
+        <div class="flex items-center gap-1 text-yellow-400 text-base font-bold mt-2">
+          <i class="ri-star-fill"></i>
+          <i class="ri-star-fill"></i>
+          <i class="ri-star-line"></i>
+          <i class="ri-star-line"></i>
+          <i class="ri-star-line"></i>
+          <span class="text-black text-xs ml-1">01</span>
+        </div>
+        <div class="mt-4">
+          <button class="add-to-cart mt-3 w-full bg-[#011F7F]  text-white py-2 rounded-md hover:bg-blue-500 z-10 relative">Add to cart</button>
+        </div>
+      </div>
+          <div class="bg-white border border-gray-200 hover:border-gray-400 cursor-pointer p-4 relative flex flex-col group" 
+          data-id="67816" data-desc="Tasty Chocolate Cookies with rich cocoa flavor. Great for parties."
+          data-images='["images/ip1.jpg","images/14a.jpg","images/24a.jpg"]'>
+        <div class="relative">
+          <img src="images/ip1.jpg" alt="Gingersnaps" class="w-full h-50">
+        </div>
+        <h3 class="text-lg font-semibold mt-3">BDT: 16950</h3>
+        <p class="text-sm text-gray-600">Nyakers Gingersnaps Pom Tin</p>
+        <div class="flex items-center gap-1 text-yellow-400 text-base font-bold mt-2">
+          <i class="ri-star-fill"></i>
+          <i class="ri-star-fill"></i>
+          <i class="ri-star-line"></i>
+          <i class="ri-star-line"></i>
+          <i class="ri-star-line"></i>
+          <span class="text-black text-xs ml-1">01</span>
+        </div>
+        <div class="mt-4">
+          <button class="add-to-cart mt-3 w-full bg-[#011F7F]  text-white py-2 rounded-md hover:bg-blue-500 z-10 relative">Add to cart</button>
+        </div>
+      </div>
+      </div>
+    </div>
+  </section>
+</main>
+<!--==================================================-->
+<footer class="bg-[#011F7F] text-white py-10">
+  <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-5 gap-8">
+    <div class="space-y-4">
+      <div class="flex items-center space-x-2">
+        <img src="images/Google.png" alt="Google" class="w-6 h-6">
+        <p class="text-sm">★★★★★ 200+ Reviews</p>
+      </div>
+      <p class="text-xs">
+        Yesweprint.com has a Google Seller rating of 5 based on 200 rating and review
+      </p>
+      <div class="flex items-center space-x-4">
+        <a href="#" class="text-xl hover:text-blue-400"><img src="images/Facebook.png" alt="" class="w-8 h-8"></i></a>
+        <a href="#" class="text-xl hover:text-pink-400"><img src="images/Twitter.png" class="w-10 h-10" alt=""></i></a>
+        <a href="#" class="text-xl hover:text-blue-400"><img src="images/Apple.png" alt="" class="w-8 h-8"></i></a>
+      </div>
+    </div>
+    <div>
+      <h4 class="font-semibold mb-3">Products</h4>
+      <ul class="space-y-2 text-sm">
+        <li><a href="#" class="hover:underline">All shirts</a></li>
+        <li><a href="#" class="hover:underline">Hoodies</a></li>
+        <li><a href="#" class="hover:underline">Crewneck</a></li>
+        <li><a href="#" class="hover:underline">Hats</a></li>
+        <li><a href="#" class="hover:underline">Tote bags</a></li>
+        <li><a href="#" class="hover:underline">See more</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="font-semibold mb-3">Services</h4>
+      <ul class="space-y-2 text-sm">
+        <li><a href="#" class="hover:underline">Embroidery</a></li>
+        <li><a href="#" class="hover:underline">Screen printing</a></li>
+        <li><a href="#" class="hover:underline">DTG printing</a></li>
+        <li><a href="#" class="hover:underline">Design Studio</a></li>
+        <li><a href="#" class="hover:underline">Design Templates</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="font-semibold mb-3">Help</h4>
+      <ul class="space-y-2 text-sm">
+        <li><a href="#" class="hover:underline">Privacy policy</a></li>
+        <li><a href="#" class="hover:underline">FAQ</a></li>
+        <li><a href="#" class="hover:underline">Promo Codes</a></li>
+        <li><a href="#" class="hover:underline">Design Review</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="font-semibold mb-3">Contact</h4>
+      <p class="text-sm">38/B Dhaka,Bangladesh , 9D Motijheel</p>
+      <div class="mt-3 space-y-2 text-sm">
+        <p class="flex items-center space-x-2"><i class="ri-wechat-fill"></i> <span>Chat with an Expert</span></p>
+        <p class="flex items-center space-x-2"><i class="ri-phone-fill"></i> <span>+8801540759308</span></p>
+        <p class="flex items-center space-x-2"><i class="ri-mail-fill"></i> <span>nexorabd.info@gmail.com</span></p>
+      </div>
+    </div>
+  </div>
+  <div class="max-w-7xl mx-auto px-6 mt-8 flex flex-wrap justify-center gap-3">
+    <img src="images/visa.png" class="h-8 bg-white p-1 rounded" alt="Discover">
+    <img src="images/mtc.png" class="h-8 bg-white p-1 rounded" alt="Apple Pay">
+    <img src="images/bksh.png" class="h-8 bg-white p-1 rounded" alt="Visa">
+    <img src="images/rkt.png" class="h-8 bg-white p-1 rounded" alt="Amex">
+    <img src="images/brk.png" class="h-8 bg-white p-1 rounded" alt="PayPal">
+  </div>
+  <div class="max-w-7xl mx-auto px-6 mt-6 border-t border-white/30 pt-4 flex flex-col md:flex-row justify-between text-xs text-gray-200">
+    <p>©2025, All right reserved.</p>
+    <div class="flex space-x-4">
+      <a href="#" class="hover:underline">Home</a>
+      <a href="#" class="hover:underline">Blog</a>
+      <a href="#" class="hover:underline">Site Map</a>
+      <a href="#" class="hover:underline">Privacy Policy</a>
+      <a href="#" class="hover:underline">Terms of Service</a>
+    </div>
+  </div>
+</footer>
+<!--==================================================-->
+<!--==================JavaScrip Link====================-->
+  <script src="js/smartphone.js"></script>
+</body>
+</html>
