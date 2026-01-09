@@ -934,6 +934,41 @@
 </div>
 </div>
 </section>
+<!---==============================================-->
+<div id="overlay" class="fixed inset-0 bg-black bg-opacity-50 hidden z-40"></div>
+<div id="cart-sidebar" class="fixed top-0 right-0 w-80 h-full bg-white shadow-lg transform translate-x-full transition-transform duration-300 z-60 flex flex-col">
+    <div class="flex justify-between items-center p-4 border-b">
+      <h2 class="text-lg font-bold"><i class="ri-shopping-cart-line text-black text-xl"></i> Your Cart</h2>
+      <button id="close-cart" class="text-gray-600 hover:text-red-500 text-2xl">
+        <i class="ri-close-line"></i>
+      </button>
+    </div>
+    <div id="cart-items" class="flex-1 overflow-y-auto p-4 space-y-3"></div>
+    <div class="border-t p-4 flex justify-between items-center">
+     <p class="font-bold">Total: <span id="cart-total">BDT 0</span></p>
+     <button id="checkout-btn" class="bg-[#011F7F] text-white px-4 py-2 rounded hover:bg-[#D4024E]">
+     Checkout</button>
+    </div>
+</div>
+<!--=================================================-->
+<section id="offer-product" class="bg-gray-50 py-16 mb-10">
+  <div class="container mx-auto px-4">
+    <div class="offer-main-content flex flex-col-reverse lg:flex-row items-center justify-between">
+      <div class="offer-left-content w-full lg:w-1/2 lg:pl-20 text-center lg:text-left mt-10 lg:mt-0">
+        <h4 class="text-black text-2xl sm:text-3xl font-bold mb-2">Deal Of The Day</h4>
+        <h2 class="text-4xl sm:text-5xl font-bold text-black mb-4">Upto 50% Off</h2>
+        <p class="text-gray-600 mb-8 px-2 sm:px-0 lg:pr-10">
+          Get the latest iPhone with premium design, blazing-fast performance, and stunning display. Limited time offer, don’t miss out!
+        </p>
+        <a href="#" class="bg-[#011F7F] text-white font-semibold px-8 sm:px-10 py-3 sm:py-4 rounded-lg shadow hover:bg-[#011F7F] transition duration-300">Shop Now</a>
+      </div>
+      <div class="offer-right-images w-full lg:w-1/2 flex justify-center">
+        <img src="images/shopping.png" alt="iPhone 14 Pro"class="w-[300px] sm:w-[400px] lg:w-[500px] rounded-xl shadow-lg transform hover:scale-105 transition duration-300"> 
+      </div>
+    </div>
+  </div>
+</section>
+
 
 
 <!--====================================================-->
